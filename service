@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+function main {
+  exec vault agent -config /vault/vault-agent.hcl "$@"
+}
+
+main "$@"

@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  agent:
+    command:
+      - -log-level
+      - debug
+    env_file: .env
+    image: defn/vault-agent
+    volumes:
+      - ./etc/vault:/vault
+    ports:
+      - 8200:8200
