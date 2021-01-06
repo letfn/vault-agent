@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 function main {
+  if [[ -n "${VAULT_AGENT_UPSTREAM_ADDR:-}" ]]; then
+    export VAULT_ADDR="${VAULT_AGENT_UPSTREAM_ADDR}"
+  fi
+
   exec vault agent -config /vault/vault-agent.hcl "$@"
 }
 
