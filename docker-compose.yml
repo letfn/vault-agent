@@ -6,7 +6,7 @@ services:
       - -log-level
       - debug
     env_file: .env
-    image: defn/vault-agent
+    image: defn/vault-agent:1.6.3
     volumes:
       - ./etc/vault:/vault
     ports:

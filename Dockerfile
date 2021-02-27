@@ -1,4 +1,4 @@
-FROM defn/vault
+FROM defn/vault:1.6.3
 
 RUN apk upgrade
 
